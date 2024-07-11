@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Items and Delete</title>
+</head>
+<body>
+    
+    <h1>Filter Items and Delete</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="id">Enter Event ID to Delete:</label>
+        <input type="number" id="id" name="id">
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

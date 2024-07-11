@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Schedule</title>
+</head>
+<body>
+    <h1>Event Scheduler</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>date</th>
+                <th>time</th>
+                <th>description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if events %}
+                {% for x in events %}
+                <tr>
+                    <td>{{ x.i}}</td>
+                    <td>{{ x.name }}</td>
+                    <td>{{ x.date }}</td>
+                    <td>{{ x.time}}</td>
+                    <td>{{ x.description}}</td>
+                </tr>
+
+                {% endfor %}
+            
+            {% else %}
+            <p>No items found for the provided ID.</p>
+            {% endif %}
+            
+        </tbody>
+    </table>
+</body>
+</html>

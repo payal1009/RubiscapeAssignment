@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Items and Delete</title>
+</head>
+<body>
+    <h1>Update data</h1>
+    <form method="post">
+        {% csrf_token %}
+    <label for="quantity">ID</label>
+    <input type="number" id="quantity" name="quantity">
+    <label for="eventname">Event name:</label></br>
+    <input type="text" id="eventname" name="eventname"><br>
+    <label for="birthday">Event Date:</label>
+    <input type="date" id="birthday" name="birthday"></br>
+    <label for="appt">Event time:</label>
+    <input type="time" id="appt" name="appt"></br>
+    Enter event description<br>
+    <textarea name="message" rows="10" cols="30"></textarea>
+    <label for="eventname">Event Type:</label></br>
+    <input type="text" id="event_type" name="event_type"><br>
+    <label for="email">Enter your email:</label>
+    <input type="email" id="email" name="email">
+    <p>
+        {{analyzed_text}}
+    </p>
+    <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
